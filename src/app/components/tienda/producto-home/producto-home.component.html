@@ -1,0 +1,46 @@
+
+<mat-drawer-container 
+[autosize]="true"
+class="min-h-full max-w-7xl mx-auto border-x"
+>
+    <mat-drawer mode="side" opened class="p-6">
+    <div class="mb-4 text-lg font-bold">Filtros</div>
+  
+  <div class="flex flex-col">
+    Precios
+    <div>
+        <button class="py-2 px-4 rounded mb-2" mat-raised-button color="accent" (click)="ordendarPrecio('asc')">Ascendente</button>
+    
+      </div>
+      <div>
+          <button class="py-2 px-4 rounded" mat-raised-button color="accent" (click)="ordendarPrecio('desc')">Descendente</button>
+      </div>
+  </div>
+  </mat-drawer>
+  
+    <mat-drawer-content class="p-6">
+        <app-producto-header (columnsCountChange)="onColumnsCountChange($event)"></app-producto-header>
+        <mat-card-header>
+            <div class="flex items-center">
+                <mat-form-field>
+                  <input matInput (keyup)="filter($event)"  placeholder="Buscar Producto">
+                </mat-form-field>
+
+            </div>
+
+          </mat-card-header>
+        <mat-grid-list
+            gutterSize="16"
+            [cols]="cols"
+            [rowHeight]="rowHeight"
+            >
+            <mat-grid-tile *ngFor="let product of products">
+                <app-producto-box 
+                [product]="product"
+                (addToCart)="onAddToCart($event)"         
+                class="w-full" [fullWidthMode]="cols === 1"></app-producto-box>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </mat-drawer-content>
+</mat-drawer-container>

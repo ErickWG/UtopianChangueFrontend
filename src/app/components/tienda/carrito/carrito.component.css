@@ -1,0 +1,29 @@
+
+.cardvacio{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px; /* 12px */
+    margin-bottom: 12px; /* 12px */
+    max-width: 80rem; /* 1280px */
+    height: 60px;
+    justify-content: center;
+
+}
+.cartlleno{
+    max-width: 80rem; /* 1280px */
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    margin-left: 10px;
+}
+button{
+    margin-left: 10px;
+
+}
+.imagen{
+      margin-bottom: 1rem; /* Equivalente a mb-1 */
+  margin-left: auto;   /* Equivalente a mx-auto */
+  margin-right: auto;  /* Equivalente a mx-auto */
+  width: 200px;  
+}

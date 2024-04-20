@@ -1,0 +1,105 @@
+<!--Login-->
+<body class="fondo">
+  <div class="total">
+    <mat-card class="card">
+
+      <h2>Registrarse</h2>
+      
+      <form [formGroup]="myForm" (ngSubmit)="register()">
+        <div class="container">
+
+          <div>
+            <mat-form-field class="custom-input">
+              <input matInput type="text" placeholder="Usuario" formControlName="username" />
+            </mat-form-field>
+            <div
+            *ngIf="
+              myForm.get('username')?.hasError('required') &&
+              myForm.get('username')?.touched
+            "
+            style="margin-top: -20px"
+          >
+            <span class="mda-form-msg"> Este campo es obligatorio </span>
+          </div>
+          </div>
+
+          <div>
+            <mat-form-field class="custom-input">
+              <input type="password" matInput placeholder="Contraseña" formControlName="password" />
+            </mat-form-field>
+            <div
+            *ngIf="
+              myForm.get('password')?.hasError('required') &&
+              myForm.get('password')?.touched
+            "
+            style="margin-top: -20px"
+          >
+            <span class="mda-form-msg"> Este campo es obligatorio </span>
+          </div>
+          </div>
+
+          <div>
+            <mat-form-field class="custom-input">
+              <input type="text" matInput placeholder="Nombre" formControlName="nombreUsuario" (keydown)="onKeyDown($event)"/>
+            </mat-form-field>
+            <div
+            *ngIf="
+              myForm.get('nombreUsuario')?.hasError('required') &&
+              myForm.get('nombreUsuario')?.touched
+            "
+            style="margin-top: -20px"
+          >
+            <span class="mda-form-msg"> Este campo es obligatorio </span>
+            </div>
+              <div *ngIf="
+              myForm.get('nombreUsuario')?.hasError('pattern') && 
+              myForm.get('nombreUsuario')?.touched"
+              style="margin-top: -20px">
+              <span class="mda-form-msg">El formato no es válido</span>
+            </div>
+          </div>
+
+          <div>
+            <mat-form-field class="custom-input">
+              <input type="text" matInput placeholder="Apellido" formControlName="apellidoUsuario" (keydown)="onKeyDown($event)"/>
+            </mat-form-field>
+            <div
+            *ngIf="
+              myForm.get('apellidoUsuario')?.hasError('required') &&
+              myForm.get('apellidoUsuario')?.touched
+            "
+            style="margin-top: -20px"
+          >
+            <span class="mda-form-msg"> Este campo es obligatorio </span>
+          </div>
+              <div *ngIf="
+              myForm.get('apellidoUsuario')?.hasError('pattern') && 
+              myForm.get('apellidoUsuario')?.touched"
+              style="margin-top: -20px">
+              <span class="mda-form-msg">El formato no es válido</span>
+            </div>
+          </div>
+
+          <div>
+              <mat-form-field class="custom-input">
+                <input type="email" matInput placeholder="Correo electrónico" formControlName="correoUsuario" (input)="onCorreoValidationInput()" />
+              </mat-form-field>  
+              <div *ngIf="myForm.get('correoUsuario')?.hasError('incorrect') && myForm.get('correoUsuario')?.touched">
+                <span class="mda-form-msg">Ingrese el formato correcto de correo electrónico.</span>
+              </div>
+              <div *ngIf="myForm.get('correoUsuario')?.hasError('required') && myForm.get('correoUsuario')?.touched">
+                <span class="mda-form-msg">Este campo es obligatorio</span>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="botones">
+          <button class="button" mat-raised-button color="accent" type="submit" [disabled]="myForm.invalid">Ok</button>
+          <button class="button" mat-raised-button color="warn" type="button" (click)="cerrar()">Cancelar</button>
+        </div>
+      </form>
+
+    </mat-card>
+  </div>
+</body>

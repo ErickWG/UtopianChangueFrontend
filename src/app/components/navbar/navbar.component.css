@@ -1,0 +1,17 @@
+
+span{
+    margin: auto;
+    text-align: center;
+}
+.example-spacer{
+    flex: 1 1 auto;
+}
+
+button{
+    margin: 10px 10px;
+    background-color: #C6ED86;
+}
+
+.mat-toolbar-row{
+    background-color: #416B5C;
+}

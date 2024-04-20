@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "my-app-id",
+    "public": "dist/tf-prueba",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

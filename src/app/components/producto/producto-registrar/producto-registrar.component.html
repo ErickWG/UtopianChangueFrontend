@@ -1,0 +1,155 @@
+<mat-card>
+    <h2>Agregar Producto</h2>
+  <form [formGroup]="myForm" autocomplete="off">
+    <!-- Primera sección -->
+    <div class="auto-container">
+ <!-- nombreEmpresa Column -->
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="nombreProducto"
+        formControlName="nombreProducto"
+        required />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('nombreProducto')?.hasError('required') &&
+        myForm.get('nombreProducto')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+     <!-- UbicacionEmpresa Column -->
+      <mat-form-field>
+        <input
+          matInput
+          type="number"
+          placeholder="precioProducto"
+          formControlName="precioProducto"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('precioProducto')?.hasError('required') &&
+        myForm.get('precioProducto')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+
+
+    <mat-form-field>
+        <input
+          matInput
+          placeholder="detalleProducto"
+          formControlName="detalleProducto"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('detalleProducto')?.hasError('required') &&
+        myForm.get('detalleProducto')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+
+
+    <mat-form-field>
+        <input
+          matInput
+          placeholder="imagenProducto"
+          formControlName="imagenProducto"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('imagenProducto')?.hasError('required') &&
+        myForm.get('imagenProducto')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+
+
+    <mat-form-field>
+        <mat-label>Selecciona una empresa</mat-label>
+        <mat-select formControlName="empresa" required>
+          <mat-option *ngFor="let empresa of empresas" [value]="empresa">
+            {{ empresa.nombreEmpresa }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div
+        *ngIf="
+          myForm.get('empresa')?.hasError('required') &&
+          myForm.get('empresa')?.touched
+        "
+        style="margin-top: -20px"
+      >
+        <span class="mda-form-msg">Este campo es obligatorio</span>
+      </div>
+
+<!--       <mat-form-field>
+        <mat-label>Selecciona materiales</mat-label>
+        <mat-select formControlName="materials" multiple>
+          <mat-option *ngFor="let material of materials" [value]="material">
+            {{ material.nombreMaterial }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+       -->
+       <mat-form-field>
+        <mat-label>Selecciona una materials</mat-label>
+        <mat-select formControlName="materials" multiple>
+          <mat-option *ngFor="let materiales of materials" [value]="materiales">
+            {{ materiales.nombreMaterial }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div
+        *ngIf="
+          myForm.get('materials')?.hasError('required') &&
+          myForm.get('materials')?.touched
+        "
+        style="margin-top: -20px"
+      >
+        <span class="mda-form-msg">Este campo es obligatorio</span>
+      </div>
+    </div>
+
+    
+
+
+  <div>
+    <button class="button"
+    mat-raised-button
+    color="primary"
+    type="button"
+    style="margin-left: 10px" 
+    (click)="addProducto()">
+Register
+</button>
+
+  
+  <button class="button"
+  mat-raised-button
+  color="warn"
+  type="button"
+  routerLink="/productolist"
+  >
+  Cancel
+  </button>
+    </div>
+  </form>
+  </mat-card>
+  
+
+  

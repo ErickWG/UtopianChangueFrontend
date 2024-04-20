@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+.card{
+    height: 50px;   
+    justify-content: center;
+}
+.show{
+    margin-right: 30px;
+}
+.sort{
+    margin-left: 30px;
+}
+.viewlist{
+    margin-left: 10px;
+}

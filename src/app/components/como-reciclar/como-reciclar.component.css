@@ -1,0 +1,41 @@
+#contenedor {
+    background-color: #C6ED86;
+    padding: 20px;
+}
+
+.como_reciclar p {
+    text-align: justify;
+    line-height: 1.8;
+    margin: 0 20px 20px 20px;
+}
+
+.como_reciclar h1, .como_reciclar h2 {
+    margin-left: 20px;
+}
+
+.como_reciclar ol, .como_reciclar ul {
+    margin-left: 30px;
+}
+
+.como_reciclar li {
+    margin-bottom: 10px;
+}
+
+/* Establecer una altura común para todas las imágenes */
+.como_reciclar img {
+    display: block;
+    margin: 0 auto;
+    height: 234px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos de enlaces */
+.como_reciclar a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.como_reciclar a:hover {
+    text-decoration: underline;
+}

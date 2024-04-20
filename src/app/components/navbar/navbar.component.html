@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <a [routerLink]="'/index'"> <!-- al presionar el logo rediriguirá al index osea a la pag principal -->
+            <img src="../assets/Img/logo.png" width="60" height="60" alt="Logo">
+        </a>        
+        <span class="large-text">Utopian Change</span>
+        
+
+
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="accent" [routerLink]="'/index'" *ngIf="!(userHasRole('USER') || userHasRole('ADMIN'))">Conócenos
+            <mat-icon>menu</mat-icon>
+        </button>
+        <button (click)="firstsession()" mat-raised-button color="accent" [routerLink]="'/home-producto'">Tienda
+            <mat-icon>store</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/login'" *ngIf="!(userHasRole('USER') || userHasRole('ADMIN'))">Iniciar Sesión
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/register'" *ngIf="!(userHasRole('USER') || userHasRole('ADMIN'))">Registrarse
+            <mat-icon>person_add</mat-icon>
+        </button>
+        
+        <!-- Botones de admin -->
+        <button mat-raised-button color="accent" [routerLink]="'/reporteventa'" *ngIf="userHasRole('ADMIN')" >Reportes
+            <mat-icon>bar_chart</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/empresalist'" *ngIf="userHasRole('ADMIN')" >Empresas
+            <mat-icon>business</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/centrolist'" *ngIf="userHasRole('ADMIN')" >Centro de reciclaje
+            <mat-icon>eco</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/productolist'" *ngIf="userHasRole('ADMIN')" >Productos
+            <mat-icon>shopping_basket</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/materiallist'" *ngIf="userHasRole('ADMIN')" >Materiales
+            <mat-icon>layers</mat-icon>
+        </button>
+        <!-- Botones de usuario -->
+        <button mat-raised-button color="accent" [routerLink]="'/infoReciclaje'" *ngIf="userHasRole('USER')" >¿Que es el reciclaje?
+            <mat-icon>delete_outline</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="'/comoReciclar'" *ngIf="userHasRole('USER')" >¿Como reciclar?
+            <mat-icon>help</mat-icon>
+        </button>
+
+        <!-- Botones de cerrar sesion -->
+        <button mat-raised-button color="warn" [routerLink]="'/login'" *ngIf="(userHasRole('USER') || userHasRole('ADMIN'))" (click)="cerrar()">Cerrar Sesión
+            <mat-icon>exit_to_app</mat-icon>
+        </button>
+
+        <app-iconocart [cart]="cart" *ngIf="(userHasRole('USER') || userHasRole('ADMIN'))"></app-iconocart>
+
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+

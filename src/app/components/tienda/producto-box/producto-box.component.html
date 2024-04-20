@@ -1,0 +1,54 @@
+
+  <mat-card *ngIf="product" [ngClass]="{ 'text-center': !fullWidthMode }">
+    <div *ngIf="fullWidthMode" class="flex">
+      <img
+        class="mb-1 mx-auto h-[360px] imagen1"
+        [src]="product.imagenProducto"
+      />
+      <div class="w-full px-8 flex flex-col justify-between">
+        <div>
+          <p class="mb-5 font-bold" style="font-size: 28px; margin-top: 10px;">{{ product.nombreProducto }}</p>
+          
+          <p class="w-full font-bold">Descripcion:</p>
+          <p>{{ product.detalleProducto }}</p>
+          <p class="w-full font-bold">Empresa Proveniente:</p>
+          <p>{{ product.empresa.nombreEmpresa }}</p>
+          <p class="w-full font-bold">Ubicación de la empresa:</p>
+          <p>{{ product.empresa.ubicacionEmpresa }}</p>
+          <p class="w-full font-bold">Correo de la empresa:</p>
+          <p>{{ product.empresa.correoEmpresa }}</p>
+          <p class="w-full font-bold">Materiales:</p>
+        
+          <ul>
+            <li *ngFor="let material of product.materials">{{ material.nombreMaterial }}</li>
+          </ul>
+        </div>
+        
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+        <button (click)="onAddToCart()" mat-mini-fab style="margin-right: 35px; margin-top: 10px;">
+            <mat-icon class="text-gray-500" >shopping_cart</mat-icon>
+        </button>
+        <span class="text-red-400" style="font-weight: bold; font-size: 30px; margin-right: 30px; margin-top: 10px;">{{ product.precioProducto | currency:'S/' }}</span>
+      </div>
+    </div>
+  
+    <div *ngIf="!fullWidthMode" class="text-center">
+      <img
+        class="mb-1 mx-auto h-[200px] imagen2"
+        [src]="product.imagenProducto"
+      />
+      <div class="w-full font-bold">
+        <p class="truncate hover:whitespace-normal">{{ product.nombreProducto }}</p>
+
+      </div>
+      
+      <div class="flex justify-between">
+        <span class="text-red-400" style="font-weight: bold; margin-left: 15px;">{{ product.precioProducto | currency:'S/' }}</span>
+        <button (click)="onAddToCart()" style="margin-right: 15px;">
+            <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+    

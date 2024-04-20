@@ -1,0 +1,158 @@
+<mat-card>
+    <h2>Agregar Centro de reciclaje</h2>
+  <form [formGroup]="myForm" autocomplete="off">
+    <!-- Primera sección -->
+    <div class="auto-container">
+ <!-- nombreCentro Column -->
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="NombreCentro"
+        formControlName="nombreCentro"
+        required />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('nombreCentro')?.hasError('required') &&
+        myForm.get('nombreCentro')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+     <!-- ubicacionCentro Column -->
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="UbicacionCentro"
+          formControlName="ubicacionCentro"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('ubicacionCentro')?.hasError('required') &&
+        myForm.get('ubicacionCentro')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+     <!-- detalleCentro Column -->
+     <mat-form-field>
+        <input
+          matInput
+          placeholder="DetalleCentro"
+          formControlName="detalleCentro"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('detalleCentro')?.hasError('required') &&
+        myForm.get('detalleCentro')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>     
+       <!-- horarioCentro Column -->
+       <mat-form-field>
+        <input
+          matInput
+          placeholder="HorarioCentro"
+          formControlName="horarioCentro"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('horarioCentro')?.hasError('required') &&
+        myForm.get('horarioCentro')?.touched
+      "
+      style="margin-top: -20px"
+    >
+
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+         <!-- correoCentro Column -->
+         <mat-form-field>
+            <input
+              matInput
+              placeholder="CorreoCentro"
+              formControlName="correoCentro"
+              required
+            />
+          </mat-form-field>
+          <div
+          *ngIf="
+            myForm.get('correoCentro')?.hasError('required') &&
+            myForm.get('correoCentro')?.touched
+          "
+          style="margin-top: -20px"
+        >
+          <span class="mda-form-msg"> Este campo es obligatorio </span>
+        </div>
+     <!-- sitioWebCentro Column -->
+         <mat-form-field>
+            <input
+             matInput
+            placeholder="SitioWebCentro"
+            formControlName="sitioWebCentro"
+           required
+             />
+         </mat-form-field>
+         <div
+          *ngIf="
+           myForm.get('sitioWebCentro')?.hasError('required') &&
+           myForm.get('sitioWebCentro')?.touched
+          "
+           style="margin-top: -20px"
+         >
+        <span class="mda-form-msg"> Este campo es obligatorio </span>
+                </div>
+     <!-- distrito Column -->
+         <mat-form-field>
+            <input
+              matInput
+              placeholder="Distrito"
+              formControlName="distrito"
+              required
+            />
+          </mat-form-field>
+          <div
+          *ngIf="
+            myForm.get('distrito')?.hasError('required') &&
+            myForm.get('distrito')?.touched
+          "
+          style="margin-top: -20px"
+        >
+          <span class="mda-form-msg"> Este campo es obligatorio </span>
+        </div>
+    </div>
+
+
+  <div>
+    <button class="button"
+    mat-raised-button
+    color="primary"
+    [disabled]="myForm.invalid"
+    type="button"
+    style="margin-left: 10 px"
+    (click)="addCentro()"
+  >
+    Register
+  </button>
+  
+  <button class="button"
+  mat-raised-button
+  color="warn"
+  type="button"
+  routerLink="/centrolist"
+  >
+  Cancel
+  </button>
+    </div>
+  </form>
+  </mat-card>
+  

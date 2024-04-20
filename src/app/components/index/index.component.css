@@ -1,0 +1,421 @@
+#containerdos{
+    width: 100%;
+    margin:0px auto;
+    background-color: #C6ED86;
+    height: 1140px;
+    border: 0.1px solid #C6ED86;
+}
+
+.contenedor_segundo h2{
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.conocenos{
+    width: 86%;
+    height: 370px;
+    margin-left: 7%;
+    margin-top: 3%;
+    background-image: url('src/assets/img/reciclaje.jpg');
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+}
+
+.conocenos h4{
+    margin-left: 3.5%;
+    margin-top: 2.5%;
+    top: 6%;/*back*/
+    padding-top: 15px;
+    font-size: 20px;
+    color: #416B5C;
+}
+
+.conocenos .textodos{
+    width: 90%;
+    height: 60%;
+    margin-left: 3.5%;
+    margin-top: 2%;
+    background-color: #B0C85A;
+    border-radius: 10px;
+}
+.parrafo{
+    width: 98%;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: 'Arial';
+    text-align: justify;
+    line-height: 2;
+}
+
+.mision_vision{
+    margin-top: 5%;
+    margin-left: 3.5%;
+    width: 92.5%;
+    height: 92.5%;
+}
+
+.mision_vision .m_v1, .mision_vision .m_v2{
+    display: flex;
+    background-color: #F0F8F8;
+    height: 300px;   
+}
+.mision_vision .m_v2{
+    justify-content: end;
+}
+
+.mision_vision .texto_m_v{
+    background-color: #B0C85A;
+    margin-left: 50px;
+    padding: 10px;
+    margin-top: 2%;
+    margin-right: 80px;
+    width: 70%;
+    height: 240px;
+    border-radius: 10px;
+}
+
+#txt_vi {
+    margin-left: 5%;
+    line-height: 1.8;
+}
+
+.mision_vision .img_m_v{
+    position: relative;
+    display: inline-block;
+}
+
+.mision_vision .img_m_v img{
+    width: 250px;
+    height: 220px;
+    margin-top: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #F0F8F8;
+}
+
+#ojo{
+    height: 210px;
+    width: 200px;
+}
+
+.texto_m_v_front{
+    position: absolute;
+    top: 36%;
+    left: 36%;
+    color: #416B5C;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+/*contenedor 3*/
+
+#containertres{
+    width: 98%;
+    background-color: #C6ED86;
+    padding-left: 40px;
+}
+
+.contenedor_tercero{
+    padding-top: 2%;
+    width: 94.4%;
+    background-color: #F0F8F8;
+    margin-left: 1.5%;
+}
+
+.contenedor_tercero .titulo_principal{
+    font-size: 205%;
+    font-family: 'Arvo Regular';
+    top:50%;
+    color: #416B5C;
+    padding-top: 20px;
+    margin-left: 3%;
+    font-weight: bold;
+}
+.subtitulo_principal{
+    font-size: 160%;
+    font-family: 'Arvo Regular';
+    top:50%;
+    color: #416B5C;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.textodos .parrafo{
+    font-size: 100%;
+}
+.Nuestros-Principios{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.logo_secundario{
+    margin-top: 40px;
+}
+.logo_secundario img{
+    height:240px ;
+    width:240px ;
+    transition: 0.3s all ease;
+}
+.logo_secundario img:hover{
+    transform: translateY(-10px);
+}
+.cajaAux{
+    margin-top: 40px;
+    margin-right: 80px;
+}
+.caja_principios{
+    background-image: url('src/assets/img/principios.png');
+    background-size: 100% 240px;
+    background-repeat: no-repeat;
+    width: 500px;
+}
+.columna{
+    padding: 10px 20px 40px 20px;
+    font-weight: bold;
+
+}
+.columna .Lt{
+    text-align: left;
+    padding-bottom: 0px;
+    transition: 0.3s all ease;
+    color: #416B5C;
+    margin-bottom: 5px;
+}
+.columna .Rt{
+    text-align: right;
+    padding-bottom: 0px;
+    transition: 0.3s all ease;
+    color: #416B5C;
+}
+
+.columna .Rt:hover, .columna .Lt:hover{
+    transform: translateY(-10px);
+}
+
+.OpcionesUC{
+    display: flex;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.card-img-top {
+    padding-top: 2%;
+    padding-left: 20%;
+    width: 60%;
+    height: 60%;
+}
+
+#mapaImg{
+    width: 90%;
+    padding-left: 5%;
+}
+.card {
+    width: 80%;
+    height: 90%;
+    display: block;
+    padding: 0.5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2%;
+    border: black solid 0.5px;
+}
+
+.Extrem-card{
+    height: 95%;
+}
+.row {
+    display: flex;
+    border: 5px
+}
+
+.Card-corp{
+    transition: 0.3s all ease;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Center-card{
+    width: 90%;
+}
+
+.Card-corp:hover{
+    transform: translateY(-10px);
+}
+.card-title{
+    color: #008000;
+    text-align: center;
+    transition: 0.2s;
+}
+.card-title:hover{
+    color:#B0C85A;
+}
+.card-body a{
+    text-decoration: none ;
+}
+.card-text{
+    color:#0d4a36;
+    text-align: justify;
+    padding: 2%;
+}
+
+/*contenedor contáctanos*/
+#contenedor_contacto{
+    background-color: #C6ED86;
+    border: 0.1px solid #C6ED86;
+}
+.Contac{
+    display: flex;
+    height: 55%;
+    justify-content: space-between;
+}
+.Contactanos{
+    font-size: 200%;
+    margin-top: 40px;
+    margin-left: 20px;
+    color: #416B5C;
+}
+.container-Contac{
+    background-image: url('src/assets/Img/fondo_principal.jpg');
+    background-repeat: no-repeat;
+    background-size: 220%;
+    margin: 20px;
+    margin-left: 25%;
+    padding: 20px 30px 20px 30px;
+    color: #0d4a36;
+    border-radius: 10px;
+}
+.Contac-Prim{
+    text-align: justify;
+    font-size: 120%;
+    color: #0d4a36;
+}
+.Contact-Message a{
+    text-decoration: none;
+}
+.Boton_Enviar{
+    margin: 20px 200px;
+    padding: 10px 20px;
+    background-color:#416B5C;
+    color:#F0F8F8;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+.Contact-NA, .Contact-NA-Rec, .Contact-ET, .Contact-ET-Rec{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    align-items: left;
+    padding: 0px 40px 0px 0px;
+}
+.Email{
+    margin: 10px 0px 10px 0px;
+}
+.Name, .Apellido, .Telefono{
+    margin: 10px 0px 10px 0px;
+}
+.Contac-NomRec, .Contac-ApRec, .Contac-EmRec, .Contac-TelRec{
+    margin: 0px 0px 0px 0px;
+    width: 300px;
+    border-radius: 5px;
+    border-color:#416B5C;
+    border-width: 1px;
+    padding-left: 10px;
+    color: #416B5C;
+}
+.Contact-Message{
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+}
+.message{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.Contac-MensRec{
+    width: 700px;
+    height: 100px;
+    border-radius: 5px;
+    border-color:#416B5C;
+    border-width: 1px;
+    padding-left: 10px;
+    color: #416B5C;
+}
+.Icons{
+    margin-top: 60px;
+}
+.calificacion{
+    writing-mode:vertical-lr;
+    transform: rotate(180deg);
+    padding: 30px 15px;
+    
+    background-color:#416B5C;
+    color:#F0F8F8;
+
+    border-radius: 230px;
+    transition: 0.5s;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: -10px;
+}
+.IconoVer{
+    transform: rotate(90deg);
+}
+.Boton_Enviar:hover{
+    background-color: #C6ED86;
+    color:#416B5C;
+}
+
+/*Footer*/
+.contactos ul, .Redessociales ul{
+    list-style: none;
+}
+.Footer{
+    background-color:#416b5c;
+    padding-top: 20px;
+    color: #C6ED86;
+}
+.F-row{
+    display: flex;
+    justify-content: space-around;
+}
+.PrimeraSec{
+    text-align: center;
+    padding: 0px 40px ;
+}
+.contactos{
+    text-align: center;
+    padding:0px 40px ;
+    border-left: 2px solid rgba(0,0,0,.4);
+}
+.contactos h4, .Redessociales h4{
+    font-weight: bold;
+}
+.contactos a{
+    text-decoration: none;
+    color:#B5E410;
+}
+.Redessociales{
+    text-align: center;
+    padding:0px 40px;
+    border-left: 2px solid rgba(0,0,0,.4);
+}
+.Redessociales img{
+    height: 16px;
+    margin-right: 10px;
+}
+.logofooter{
+    height: 64px;
+}
+.pfooter{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0PX;
+}
+.pfooter a{
+    text-decoration: none;
+    color:#B5E410;
+}

@@ -1,0 +1,68 @@
+<mat-card>
+    <h2>Agregar Material</h2>
+  <form [formGroup]="myForm" autocomplete="off">
+    <!-- Primera sección -->
+    <div class="auto-container">
+ <!-- nombreEmpresa Column -->
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="nombreMaterial"
+        formControlName="nombreMaterial"
+        required />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('nombreMaterial')?.hasError('required') &&
+        myForm.get('nombreMaterial')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+     <!-- UbicacionEmpresa Column -->
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="detalleMaterial"
+          formControlName="detalleMaterial"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('detalleMaterial')?.hasError('required') &&
+        myForm.get('detalleMaterial')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+    </div>
+
+
+  <div>
+    <button class="button"
+    mat-raised-button
+    color="primary"
+    type="button"
+    style="margin-left: 10px" 
+    (click)="addMaterial()">
+Register
+</button>
+
+  
+  <button class="button"
+  mat-raised-button
+  color="warn"
+  type="button"
+  routerLink="/materiallist"
+  >
+  Cancel
+  </button>
+    </div>
+  </form>
+  </mat-card>
+  
+
+  

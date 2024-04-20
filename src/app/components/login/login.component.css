@@ -1,0 +1,41 @@
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200%;
+    margin-left: 20px;
+}
+.button {
+    align-items: center;
+    width:80%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+.card{
+    max-width: 500px;
+    width: 470px; /* Asegúrate de que el ancho sea el 100% para evitar desbordamientos */
+    text-align: center; /* Alinea el contenido del mat-card al centro */
+    background-color: #C6ED86;
+    border-radius: 10px;
+}
+.total {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('src/assets/Img/fondo_principal2.jpg');
+    background-size: cover;
+    background-position: cover;
+    
+}
+.custom-input{
+    width: 200%;
+    margin-bottom: 10px; 
+}

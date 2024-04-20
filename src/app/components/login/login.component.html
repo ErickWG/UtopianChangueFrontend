@@ -1,0 +1,69 @@
+    <!--Login-->
+    <body class = "fondo">
+      <div class="total">
+        <mat-card class="card"> 
+
+            <h2>Inicio de Sesión</h2>
+                <div class="container">
+                    <div>
+                        <mat-form-field class="custom-input">
+        
+                            <input matInput readonly placeholder="Usuario" [(ngModel)]="username" name="username" />
+            
+                        </mat-form-field>
+                    </div>
+        
+                    <div>
+                        <mat-form-field class="custom-input">
+        
+                            <input  type="password" matInput  placeholder="Contraseña" [(ngModel)]="password" name="password" /> <!-- FormsModule -->
+              
+                          </mat-form-field>
+                    </div>
+        
+                </div>
+        
+                <div class="botones">
+                    <button class="button"
+                    mat-raised-button
+                    color="accent"
+                    type="button"
+                    style="margin-left: 10px;"
+                    (click)="login()">
+                    Ok 
+                    </button>
+                    <button class="button" 
+                    mat-raised-button color="warn" 
+                    type="button" 
+                    style="margin-left: 10px;"
+                     (click)="cerrar()">
+                      Cancelar
+                    </button>
+            
+                </div>
+        </mat-card> 
+    </div>
+    </body>
+
+
+
+<!--     <section class="fondo " >
+        <form class="formulario mb-5">
+          <h1 class="mt-4">Inicio de Sesión</h1>
+          <div class="contenedor">
+            <div class="input-contenedor">
+              <i class="fa-solid fa-user icon"></i>
+              <input matInput type="text" placeholder="Username" [(ngModel)]="username" name="username" />
+            </div>
+            <div class="input-contenedor">
+              <i class="fa-solid fa-lock icon"></i>
+              <input type="password" matInput  placeholder="Password" [(ngModel)]="password" name="password" />  FormsModule 
+            </div>
+            <input type="button" value="Login" class="button" id="boton" (click)="login()"/>
+  
+  
+          </div>
+        </form>
+      </section> -->
+
+      

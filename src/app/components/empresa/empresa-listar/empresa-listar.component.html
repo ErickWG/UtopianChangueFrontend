@@ -1,0 +1,68 @@
+<h2>Lista de Empresas</h2>
+
+<button class="boton" mat-raised-button color="accent" [routerLink]="'/empresaadd'">Añadir Empresa</button>
+
+
+<!-- <mat-card-header>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Buscar Autos</mat-label>
+            <input matInput #input (keyup)="filterAutoByBrand(input.value)"  />
+        </mat-form-field>
+    </div>
+</mat-card-header> -->
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 custom-table">
+
+    <ng-container matColumnDef="idEmpresa">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{element.idEmpresa}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreEmpresa">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let element">{{element.nombreEmpresa}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ubicacionEmpresa">
+        <th mat-header-cell *matHeaderCellDef>Ubicacion</th>
+        <td mat-cell *matCellDef="let element">{{element.ubicacionEmpresa}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="detalleEmpresa">
+        <th mat-header-cell *matHeaderCellDef>Detalle</th>
+        <td mat-cell *matCellDef="let element">{{element.detalleEmpresa}}</td>
+    </ng-container>
+    <ng-container matColumnDef="correoEmpresa">
+        <th mat-header-cell *matHeaderCellDef>Correo</th>
+        <td mat-cell *matCellDef="let element">{{element.correoEmpresa}}</td>
+    </ng-container>
+    <ng-container matColumnDef="sitioWebEmpresa">
+        <th mat-header-cell *matHeaderCellDef>Sitio Web</th>
+        <td mat-cell *matCellDef="let element">{{element.sitioWebEmpresa}}</td>
+    </ng-container>
+
+    <!-- Acciones Column -->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element; let i = index">
+
+          <button mat-icon-button color="primary" (click)="delete(element.idEmpresa)">
+            <mat-icon aria-label="Delete">delete</mat-icon>
+          </button>
+        </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator              
+              [pageSizeOptions]="[5, 10]"
+              showFirstLastButtons
+              aria-label="Select page of periodic elements">
+</mat-paginator>

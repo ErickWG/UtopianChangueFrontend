@@ -1,0 +1,53 @@
+#contenedor {
+    background-color: #C6ED86;
+    padding: 20px;
+}
+
+.info_principal {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.info_principal header h1,
+.info_principal h2 {
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.info_principal p {
+    margin-bottom: 15px;
+}
+
+/* Establecer una altura común para todas las imágenes */
+.info_principal img {
+    display: block;
+    margin: 0 auto;
+    height: 234px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos de enlaces */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de imágenes específicos */
+.imagen1 img,
+.imagen2 img,
+.imagen3 img,
+.imagen4 img,
+.imagen5 img,
+.imagen6 img,
+.imagen7 img {
+    height: 234px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 5px;
+}

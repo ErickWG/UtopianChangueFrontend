@@ -1,0 +1,122 @@
+<mat-card>
+    <h2>Agregar Empresa</h2>
+  <form [formGroup]="myForm" autocomplete="off">
+    <!-- Primera sección -->
+    <div class="auto-container">
+ <!-- nombreEmpresa Column -->
+      <mat-form-field>
+        <input
+        matInput
+        placeholder="NombreEmpresa"
+        formControlName="nombreEmpresa"
+        required />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('nombreEmpresa')?.hasError('required') &&
+        myForm.get('nombreEmpresa')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+     <!-- UbicacionEmpresa Column -->
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="UbicacionEmpresa"
+          formControlName="ubicacionEmpresa"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('ubicacionEmpresa')?.hasError('required') &&
+        myForm.get('ubicacionEmpresa')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+     <!-- DetalleEmpresa Column -->
+     <mat-form-field>
+        <input
+          matInput
+          placeholder="DetalleEmpresa"
+          formControlName="detalleEmpresa"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('detalleEmpresa')?.hasError('required') &&
+        myForm.get('detalleEmpresa')?.touched
+      "
+      style="margin-top: -20px"
+    >
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>     
+       <!-- correoEmpresa Column -->
+       <mat-form-field>
+        <input
+          matInput
+          placeholder="CorreoEmpresa"
+          formControlName="correoEmpresa"
+          required
+        />
+      </mat-form-field>
+      <div
+      *ngIf="
+        myForm.get('correoEmpresa')?.hasError('required') &&
+        myForm.get('correoEmpresa')?.touched
+      "
+      style="margin-top: -20px"
+    >
+
+      <span class="mda-form-msg"> Este campo es obligatorio </span>
+    </div>
+         <!-- sitioWebEmpresa Column -->
+         <mat-form-field>
+            <input
+              matInput
+              placeholder="SitioWebEmpresa"
+              formControlName="sitioWebEmpresa"
+              required
+            />
+          </mat-form-field>
+          <div
+          *ngIf="
+            myForm.get('sitioWebEmpresa')?.hasError('required') &&
+            myForm.get('sitioWebEmpresa')?.touched
+          "
+          style="margin-top: -20px"
+        >
+          <span class="mda-form-msg"> Este campo es obligatorio </span>
+        </div>
+    </div>
+
+
+  <div>
+    <button class="button"
+    mat-raised-button
+    color="primary"
+    [disabled]="myForm.invalid"
+    type="button"
+    style="margin-left: 10 px"
+    (click)="addEmpresa()"
+  >
+    Register
+  </button>
+  
+  <button class="button"
+  mat-raised-button
+  color="warn"
+  type="button"
+  routerLink="/empresalist"
+  >
+  Cancel
+  </button>
+    </div>
+  </form>
+  </mat-card>
+  

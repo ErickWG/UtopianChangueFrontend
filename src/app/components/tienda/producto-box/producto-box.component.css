@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.imagen1{
+    margin-bottom: 1rem; /* Equivalente a mb-1 */
+    margin-left: auto;    /* Equivalente a mx-auto */
+    margin-right: auto;   /* Equivalente a mx-auto */
+    height: 360px;    
+}
+.imagen2{
+    margin-bottom: 1rem; /* Equivalente a mb-1 */
+    margin-left: auto;    /* Equivalente a mx-auto */
+    margin-right: auto;   /* Equivalente a mx-auto */
+    height: 200px;    
+}
+.clase-contenedor {
+    display: flex;
+    justify-content: space-between;
+  }
